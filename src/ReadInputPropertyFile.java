@@ -10,7 +10,7 @@ class ReadInputPropertyFile {
         int regNum = 1;
 
         try {
-            FileReader myFile = new FileReader("/Users/oisin/Desktop/Second Year/Java/InputProperty.txt");
+            FileReader myFile = new FileReader("src/txt/InputProperty.txt");
             Scanner scanFile = new Scanner(myFile);
             while(scanFile.hasNextLine()){
                 line = scanFile.nextLine();

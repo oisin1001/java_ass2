@@ -18,7 +18,7 @@ class PrintAllProperties {
     void PrintAllPropertiesMethod(ArrayList<Apartment> apartments, ArrayList<House> houses, ArrayList<Villa> villas)
             throws FileNotFoundException {
 
-        File fileName = new File("/Users/oisin/Desktop/Second Year/Java/output.txt");
+        File fileName = new File("src/txt/OutputProperty.txt");
 
         PrintWriter pw = new PrintWriter(fileName);
 

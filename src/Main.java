@@ -5,6 +5,12 @@
  *   This class runs the program itself, and calls all of the other methods
  */
 
+/* TO-DO
+    IMPLEMENT RENTING FOR VEHICLES
+    ADD MORE COMMENTS
+    CALCULATE TOTAL RENTAL INCOME FOR VEHICLES
+    SEE IF IT WORKS
+ */
 
 import java.util.ArrayList;
 
@@ -24,17 +30,29 @@ public class Main {
      //   FillInProperties Filler = new FillInProperties();
      //   Filler.FillInPropertiesMethod(apartments, houses, villas);
 
-        ReadInputPropertyFile Reader = new ReadInputPropertyFile();
-        Reader.readInputPropertyFileMethod(apartments, houses, villas);
+        ReadInputPropertyFile PropertyReader = new ReadInputPropertyFile();
+        PropertyReader.readInputPropertyFileMethod(apartments, houses, villas);
+
+        ReadInputVehicleFile VehicleReader = new ReadInputVehicleFile();
+        VehicleReader.readInputVehicleFileMethod(cars, trucks);
 
 
-        RentProperty Renter = new RentProperty();
-        Renter.GiveRentalProperty(apartments, houses, villas);
+        RentProperty PropertyRenter = new RentProperty();
+        PropertyRenter.GiveRentalProperty(apartments, houses, villas);
+
+
 		
         /* I create an object so I can call the PrintAllPropertiesMethod to print the added information */
-        PrintAllProperties Printer = new PrintAllProperties();
+        PrintAllProperties PropertyPrinter = new PrintAllProperties();
         try {
-            Printer.PrintAllPropertiesMethod(apartments, houses, villas);
+            PropertyPrinter.PrintAllPropertiesMethod(apartments, houses, villas);
+        } catch(Exception ex) {
+            System.out.println("idk");
+        }
+
+        PrintAllVehicles VehiclesPrinter = new PrintAllVehicles();
+        try {
+            VehiclesPrinter.PrintAllVehiclesMethod(cars, trucks);
         } catch(Exception ex) {
             System.out.println("idk");
         }

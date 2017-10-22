@@ -10,7 +10,7 @@ public class ReadInputVehicleFile {
         int regNum = 1;
 
         try {
-            FileReader myFile = new FileReader("/Users/oisin/Desktop/Second Year/Java/InputVehicle.txt");
+            FileReader myFile = new FileReader("src/txt/InputVehicle.txt");
             Scanner scanFile = new Scanner(myFile);
             while(scanFile.hasNextLine()){
                 line = scanFile.nextLine();
@@ -26,9 +26,9 @@ public class ReadInputVehicleFile {
                 } else if (VehicleType == 2) {
                     int RentalCostPerDay= getWords.nextInt();
                     int TotalRentalDays= getWords.nextInt();
-                    int passengerNumber= getWords.nextInt();
+                    int cargoWeight= getWords.nextInt();
                     String Owner= getWords.next();
-                    trucks.add(new Truck(regNum++, Owner, RentalCostPerDay, TotalRentalDays, passengerNumber));
+                    trucks.add(new Truck(regNum++, Owner, RentalCostPerDay, TotalRentalDays, cargoWeight));
                 }
             }
         }

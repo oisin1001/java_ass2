@@ -62,6 +62,24 @@ public class Vehicle implements RentalItem {
         costPerDay = enteredCost;
     }
 
+    /**
+     * Returns the value the register number of the vehicle
+     * @return the register number
+     */
+    int getRegNum()
+    {
+        return regNum;
+    }
+
+    /**
+     Changes the owner's name for the vehicle
+     @param enteredRegNum the new owner's name
+     */
+    void setRegNum(int enteredRegNum)
+    {
+        regNum = enteredRegNum;
+    }
+
 
     public void RentalItem(int enteredRentalDays){
         totalRentalDays = enteredRentalDays - 1;
