@@ -32,7 +32,7 @@ public class Main {
         Renter.GiveRentalProperty(apartments, houses, villas);
 		
         /* I create an object so I can call the PrintAllPropertiesMethod to print the added information */
-       PrintToFile Printer = new PrintToFile();
+        PrintAllProperties Printer = new PrintAllProperties();
         try {
             Printer.PrintAllPropertiesMethod(apartments, houses, villas);
         } catch(Exception ex) {
