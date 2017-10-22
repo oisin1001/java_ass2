@@ -1,10 +1,16 @@
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Vehicle implements RentalItem {
 
+    private int regNum;
     private String ownerName = "";
     private int costPerDay;
     private int totalRentalDays = 0;
 
-    Vehicle(String enteredName, int enteredCost, int enteredDays){
+    Vehicle(int enteredRegNum, String enteredName, int enteredCost, int enteredDays){
+        regNum = enteredRegNum;
         ownerName = enteredName;
         costPerDay = enteredCost;
         totalRentalDays = enteredDays;
@@ -60,4 +66,5 @@ public class Vehicle implements RentalItem {
     public void RentalItem(int enteredRentalDays){
         totalRentalDays = enteredRentalDays - 1;
     }
+
 }

@@ -16,6 +16,9 @@ public class Main {
 		ArrayList<Apartment> apartments = new ArrayList<>();
         ArrayList<House> houses = new ArrayList<>();
         ArrayList<Villa> villas = new ArrayList<>();
+
+        ArrayList<Car> cars = new ArrayList<>();
+        ArrayList<Truck> trucks = new ArrayList<>();
        
         /* I create an object so I can call the FillInPropertiesMethod to add details to the arraylists */
      //   FillInProperties Filler = new FillInProperties();
