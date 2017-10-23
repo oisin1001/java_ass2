@@ -37,8 +37,8 @@ class Main {
     //    ReadInputPropertyFile PropertyReader = new ReadInputPropertyFile();
      //   PropertyReader.readInputPropertyFileMethod(Main.apartments, Main.houses, Main.villas);
 
-        ReadInputVehicleFile VehicleReader = new ReadInputVehicleFile();
-        VehicleReader.readInputVehicleFileMethod(cars, trucks);
+    //    ReadInputVehicleFile VehicleReader = new ReadInputVehicleFile();
+    //    VehicleReader.readInputVehicleFileMethod(cars, trucks);
 
         Menu menuFrame = new Menu();
         menuFrame.setSize(700,100);

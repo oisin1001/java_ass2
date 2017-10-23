@@ -21,6 +21,8 @@ class PrintAllVehicles {
 
         PrintWriter pw = new PrintWriter(fileName);
 
+        System.out.println("printy veh stuff");
+
         int i;
 
         pw.println("=============== All Cars ============");

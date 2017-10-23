@@ -28,9 +28,7 @@ class Property implements RentalItem {
 		costPerDay = enteredCost;
 		seasonsRentalDays = enteredDays;
 		/* Here I rent each property three times */
-	//	RentProperty(10);
-	//	RentProperty(5);
-	//	RentProperty(3);
+
 	}
 	
 	/**
