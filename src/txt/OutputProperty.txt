@@ -1,0 +1,93 @@
+=============== All Apartments ============
+Apartment 1:
+Register Number: 1
+Owner name: George
+Address: Paradise_3
+Cost per day: 50
+Number of season's rental days: 0
+Total rental days: 30
+Storey number: 1
+Number of beds: 2
+
+Apartment 2:
+Register Number: 2
+Owner name: John
+Address: Somewhere_4
+Cost per day: 50
+Number of season's rental days: 0
+Total rental days: 0
+Storey number: 2
+Number of beds: 3
+
+Apartment 3:
+Register Number: 3
+Owner name: Jane
+Address: Devil’s_place_3
+Cost per day: 50
+Number of season's rental days: 0
+Total rental days: 0
+Storey number: 2
+Number of beds: 4
+
+=============== All Houses ============
+House 1:
+Register Number: 4
+Owner name: George
+Address: Paradise_13
+Cost per day: 60
+Number of season's rental days: 0
+Total rental days: 0
+Number of stories: 1
+Clearing fees: 50
+
+House 2:
+Register Number: 5
+Owner name: John
+Address: Somewhere_14
+Cost per day: 60
+Number of season's rental days: 0
+Total rental days: 80
+Number of stories: 2
+Clearing fees: 50
+
+House 3:
+Register Number: 6
+Owner name: Jane
+Address: Devil’s_place_13
+Cost per day: 60
+Number of season's rental days: 0
+Total rental days: 50
+Number of stories: 4
+Clearing fees: 60
+
+=============== All Villas ============
+Villa 1:
+Register Number: 7
+Owner name: George
+Address: Paradise_23
+Cost per day: 50
+Number of season's rental days: 0
+Total rental days: 0
+Room service cost per day: 10
+Luxury tax per day: 10
+
+Villa 2:
+Register Number: 8
+Owner name: John
+Address: Somewhere_24
+Cost per day: 40
+Number of season's rental days: 0
+Total rental days: 0
+Room service cost per day: 15
+Luxury tax per day: 20
+
+Villa 3:
+Register Number: 9
+Owner name: Jane
+Address: Devil’s_place_23
+Cost per day: 55
+Number of season's rental days: 0
+Total rental days: 0
+Room service cost per day: 20
+Luxury tax per day: 30
+

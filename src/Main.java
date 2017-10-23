@@ -14,41 +14,53 @@
 
 import java.util.ArrayList;
 
-public class Main {
-	
-	public static void main(String[] args) {
+class Main {
+
+    public static ArrayList<Apartment> apartments = new ArrayList<>();
+    public static ArrayList<House> houses = new ArrayList<>();
+    public static ArrayList<Villa> villas = new ArrayList<>();
+
+    public static ArrayList<Car> cars = new ArrayList<>();
+    public static ArrayList<Truck> trucks = new ArrayList<>();
+
+    public static void main(String[] args) {
 
 		/* These three arraylists store the information about the different rented properties*/
-		ArrayList<Apartment> apartments = new ArrayList<>();
-        ArrayList<House> houses = new ArrayList<>();
-        ArrayList<Villa> villas = new ArrayList<>();
 
-        ArrayList<Car> cars = new ArrayList<>();
-        ArrayList<Truck> trucks = new ArrayList<>();
-       
+
+
+
         /* I create an object so I can call the FillInPropertiesMethod to add details to the arraylists */
      //   FillInProperties Filler = new FillInProperties();
      //   Filler.FillInPropertiesMethod(apartments, houses, villas);
 
-        ReadInputPropertyFile PropertyReader = new ReadInputPropertyFile();
-        PropertyReader.readInputPropertyFileMethod(apartments, houses, villas);
+    //    ReadInputPropertyFile PropertyReader = new ReadInputPropertyFile();
+     //   PropertyReader.readInputPropertyFileMethod(Main.apartments, Main.houses, Main.villas);
 
         ReadInputVehicleFile VehicleReader = new ReadInputVehicleFile();
         VehicleReader.readInputVehicleFileMethod(cars, trucks);
 
+        Menu menuFrame = new Menu();
+        menuFrame.setSize(470,65);
+        menuFrame.setLocation(300,360);
+        menuFrame.setVisible(true);
 
-        RentProperty PropertyRenter = new RentProperty();
-        PropertyRenter.GiveRentalProperty(apartments, houses, villas);
+
+        //     RentProperty2 frame = new RentProperty2(apartments, houses, villas);
+    /*    RentProperty2 frame = new RentProperty2();
+        frame.setSize(470,65);
+        frame.setLocation(300,360);
+        frame.setVisible(true); */
 
 
 		
         /* I create an object so I can call the PrintAllPropertiesMethod to print the added information */
-        PrintAllProperties PropertyPrinter = new PrintAllProperties();
+    /*    PrintAllProperties PropertyPrinter = new PrintAllProperties();
         try {
-            PropertyPrinter.PrintAllPropertiesMethod(apartments, houses, villas);
+            PropertyPrinter.PrintAllPropertiesMethod(Main.apartments, Main.houses, Main.villas);
         } catch(Exception ex) {
             System.out.println("idk");
-        }
+        }*/
 
         PrintAllVehicles VehiclesPrinter = new PrintAllVehicles();
         try {
@@ -65,6 +77,5 @@ public class Main {
 		/* I create an object so I can call the CalculateTotalIncomeAmount method to calculate the total income amount */
 	//	CalculateTotalIncome Calculator = new CalculateTotalIncome();
 	//	Calculator.CalculateTotalIncomeAmount(apartments, houses, villas);
-		System.exit(0);
 	}
 }

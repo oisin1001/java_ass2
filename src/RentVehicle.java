@@ -5,10 +5,10 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.awt.event.*;
 
-class RentProperty extends JFrame implements ActionListener {
+class RentVehicle extends JFrame implements ActionListener {
 
-    boolean propertyFound;
-    int i, propertyID, rentalDays;
+    boolean vehicleFound;
+    int i, vehicleID, rentalDays;
 
     JTextField searchNumField = new JTextField(4);
 
@@ -20,7 +20,7 @@ class RentProperty extends JFrame implements ActionListener {
 
 
     // RentProperty2(ArrayList<Apartment> apartments, ArrayList<House> houses, ArrayList<Villa> villas) {
-    RentProperty() {
+    RentVehicle() {
         super("myButtonJFrame");
 
     /*    class PageActionListener implements ActionListener {
@@ -86,36 +86,28 @@ class RentProperty extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         JOptionPane.showMessageDialog(null,"Count button clicked!");
         System.out.println("Shit's happening!");
-        propertyID = Integer.parseInt(searchNumField.getText());
+        vehicleID = Integer.parseInt(searchNumField.getText());
         rentalDays = Integer.parseInt(numDaysField.getText());
-        propertyFound = false;
+        vehicleFound = false;
 
-        for (i = 0; i < 3 && propertyFound == false; i++) {
-            if (propertyID ==  Main.apartments.get(i).getRegNum()) {
-                Main.apartments.get(i).RentalItem(rentalDays);
-                propertyFound = true;
-                System.out.println("Apartment " + (i+1) + " value " + rentalDays);
+        for (i = 0; i < 3 && vehicleFound == false; i++) {
+            if (vehicleID ==  Main.cars.get(i).getRegNum()) {
+                Main.cars.get(i).RentalItem(rentalDays);
+                vehicleFound = true;
+                System.out.println("Vehicle " + (i+1) + " value " + rentalDays);
                 //    return apartments;
             }
         }
 
-        for (i = 0; i < 3 && propertyFound == false; i++) {
-            if (propertyID ==  Main.houses.get(i).getRegNum()) {
-                Main.houses.get(i).RentalItem(rentalDays);
-                propertyFound = true;
-                System.out.println("House " + (i+1) + " value " + rentalDays);
+        for (i = 0; i < 3 && vehicleFound == false; i++) {
+            if (vehicleID ==  Main.trucks.get(i).getRegNum()) {
+                Main.trucks.get(i).RentalItem(rentalDays);
+                vehicleFound = true;
+                System.out.println("Vehicle " + (i+1) + " value " + rentalDays);
                 //    return houses;
             }
         }
 
-        for (i = 0; i < 3 && propertyFound == false; i++) {
-            if (propertyID == Main.villas.get(i).getRegNum()) {
-                Main.villas.get(i).RentalItem(rentalDays);
-                propertyFound = true;
-                System.out.println("Villa " + (i+1) + " value " + rentalDays);
-                //    return villas;
-            }
-        }
     }
 }
 
