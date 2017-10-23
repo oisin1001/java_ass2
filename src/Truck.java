@@ -2,8 +2,8 @@ class Truck extends Vehicle {
 
     int cargoWeight;
 
-    Truck(int enteredRegNum, String enteredName, int enteredCost, int enteredDays, int enteredCargoWeight){
-        super(enteredRegNum, enteredName, enteredCost, enteredDays);
+    Truck(int enteredRegNum, String enteredName, int enteredCost, int enteredCargoWeight){
+        super(enteredRegNum, enteredName, enteredCost);
         cargoWeight = enteredCargoWeight;
     }
 

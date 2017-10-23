@@ -2,8 +2,8 @@
 
      int passengersNumber;
 
-     Car(int enteredRegNum, String enteredName, int enteredCost, int enteredDays, int enteredPassengersNumber){
-         super(enteredRegNum, enteredName, enteredCost, enteredDays);
+     Car(int enteredRegNum, String enteredName, int enteredCost, int enteredPassengersNumber){
+         super(enteredRegNum, enteredName, enteredCost);
          passengersNumber = enteredPassengersNumber;
      }
 

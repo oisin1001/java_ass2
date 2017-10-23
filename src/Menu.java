@@ -8,29 +8,34 @@ import java.awt.event.*;
 class Menu extends JFrame implements ActionListener {
 
     JButton importPropertyButton = new JButton("Import Property");
-    JButton printPropertyButton = new JButton("Print Property");
     JButton rentPropertyButton = new JButton("Rent Property");
+    JButton CalculatePropertyIncomeButton = new JButton("Calculate Property Income");
+    JButton printPropertyButton = new JButton("Print Property");
     JButton importVehicleButton = new JButton("Import Vehicle");
-    JButton printVehicleButton = new JButton("Print Vehicle");
     JButton rentVehicleButton = new JButton("Rent Vehicle");
+    JButton CalculateVehicleIncomeButton = new JButton("Calculate Vehicle Income");
+    JButton printVehicleButton = new JButton("Print Vehicle");
 
     Menu(){
         super("Main Menu");
         importPropertyButton.addActionListener(this);
-        printPropertyButton.addActionListener(this);
         rentPropertyButton.addActionListener(this);
-        importVehicleButton.addActionListener(this);
+        CalculatePropertyIncomeButton.addActionListener(this);
         printVehicleButton.addActionListener(this);
+        importVehicleButton.addActionListener(this);
         rentVehicleButton.addActionListener(this);
+        CalculateVehicleIncomeButton.addActionListener(this);
+        printVehicleButton.addActionListener(this);
         Container content = this.getContentPane();
-        content.setLayout(new GridLayout(2,3));
+        content.setLayout(new GridLayout(2,4));
         content.add(importPropertyButton);
-        content.add(printPropertyButton);
         content.add(rentPropertyButton);
+        content.add(CalculatePropertyIncomeButton);
+        content.add(printPropertyButton);
         content.add(importVehicleButton);
-        content.add(printVehicleButton);
         content.add(rentVehicleButton);
-
+        content.add(CalculateVehicleIncomeButton);
+        content.add(printVehicleButton);
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
@@ -50,7 +55,12 @@ class Menu extends JFrame implements ActionListener {
                 System.out.println("Error printing");
             }
             JOptionPane.showMessageDialog(null,"Property printed:");
-        } else if(e.getSource() == rentPropertyButton)
+        }  else if(e.getSource() == CalculatePropertyIncomeButton)
+        {
+            CalculatePropertyTotalIncome PropertyIncome = new CalculatePropertyTotalIncome();
+            PropertyIncome.CalculatePropertyTotalIncomeAmount(Main.apartments, Main.houses, Main.villas);
+        }
+        else if(e.getSource() == rentPropertyButton)
         {
             RentProperty frame = new RentProperty();
             frame.setSize(470,65);
@@ -76,6 +86,10 @@ class Menu extends JFrame implements ActionListener {
             frame.setSize(470,65);
             frame.setLocation(300,360);
             frame.setVisible(true);
+        } else if(e.getSource() == CalculateVehicleIncomeButton)
+        {
+            CalculateVehicleTotalIncome VehicleIncome = new CalculateVehicleTotalIncome();
+            VehicleIncome.CalculateVehicleTotalIncomeAmount(Main.cars, Main.trucks);
         }
 
     }

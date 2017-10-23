@@ -19,16 +19,14 @@ public class ReadInputVehicleFile {
                 int VehicleType = getWords.nextInt();
                 if (VehicleType == 1) {
                     int RentalCostPerDay= getWords.nextInt();
-                    int TotalRentalDays= getWords.nextInt();
                     int passengerNumber= getWords.nextInt();
                     String Owner= getWords.next();
-                    cars.add(new Car(regNum++, Owner, RentalCostPerDay, TotalRentalDays, passengerNumber));
+                    cars.add(new Car(regNum++, Owner, RentalCostPerDay, passengerNumber));
                 } else if (VehicleType == 2) {
                     int RentalCostPerDay= getWords.nextInt();
-                    int TotalRentalDays= getWords.nextInt();
                     int cargoWeight= getWords.nextInt();
                     String Owner= getWords.next();
-                    trucks.add(new Truck(regNum++, Owner, RentalCostPerDay, TotalRentalDays, cargoWeight));
+                    trucks.add(new Truck(regNum++, Owner, RentalCostPerDay, cargoWeight));
                 }
             }
         }

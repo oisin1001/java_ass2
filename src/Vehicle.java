@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -9,11 +10,11 @@ public class Vehicle implements RentalItem {
     private int costPerDay;
     private int totalRentalDays = 0;
 
-    Vehicle(int enteredRegNum, String enteredName, int enteredCost, int enteredDays){
+    Vehicle(int enteredRegNum, String enteredName, int enteredCost){
         regNum = enteredRegNum;
         ownerName = enteredName;
         costPerDay = enteredCost;
-        totalRentalDays = enteredDays;
+        totalRentalDays = 0;
     }
 
 
@@ -83,6 +84,33 @@ public class Vehicle implements RentalItem {
 
     public void RentalItem(int enteredRentalDays){
         totalRentalDays = enteredRentalDays - 1;
+    }
+
+    /**
+     * Calculates the total income generated to date
+     *
+     * @param apartments the arraylist that contains details about the apartments
+     * @param houses     the arraylist that contains details about the houses
+     * @param villas     he arraylist that contains details about the villas
+     */
+    void CalculateVehicleTotalIncome(ArrayList<Car> cars, ArrayList<Truck> trucks) {
+        int i;
+        double totalIncome = 0.0;
+
+		/* This calculates the income for apartments and adds it to the total */
+        for (i = 0; i < cars.size(); i++) {
+            totalIncome = totalIncome + cars.get(i).getTotalRentalDays() * cars.get(i).getCostPerDay();
+        }
+
+		/* This calculates the income for houses  and adds it to the total */
+        for (i = 0; i < trucks.size(); i++) {
+            if (trucks.get(i).getTotalRentalDays() > 0) {
+                totalIncome += (trucks.get(i).getTotalRentalDays() * trucks.get(i).getCostPerDay()) + trucks.get(i).getCargoWeight();
+            }
+        }
+
+        // This is tells the user the total income
+        JOptionPane.showMessageDialog(null, "Total rental income: " + totalIncome);
     }
 
 }

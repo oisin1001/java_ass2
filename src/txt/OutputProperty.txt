@@ -5,9 +5,10 @@ Owner name: George
 Address: Paradise_3
 Cost per day: 50
 Number of season's rental days: 0
-Total rental days: 30
+Total rental days: 50
 Storey number: 1
 Number of beds: 2
+(1160)
 
 Apartment 2:
 Register Number: 2
@@ -46,7 +47,7 @@ Owner name: John
 Address: Somewhere_14
 Cost per day: 60
 Number of season's rental days: 0
-Total rental days: 80
+Total rental days: 0
 Number of stories: 2
 Clearing fees: 50
 
@@ -56,7 +57,7 @@ Owner name: Jane
 Address: Devil’s_place_13
 Cost per day: 60
 Number of season's rental days: 0
-Total rental days: 50
+Total rental days: 0
 Number of stories: 4
 Clearing fees: 60
 

@@ -41,7 +41,7 @@ class Main {
         VehicleReader.readInputVehicleFileMethod(cars, trucks);
 
         Menu menuFrame = new Menu();
-        menuFrame.setSize(470,65);
+        menuFrame.setSize(700,100);
         menuFrame.setLocation(300,360);
         menuFrame.setVisible(true);
 
@@ -62,12 +62,12 @@ class Main {
             System.out.println("idk");
         }*/
 
-        PrintAllVehicles VehiclesPrinter = new PrintAllVehicles();
+  /*      PrintAllVehicles VehiclesPrinter = new PrintAllVehicles();
         try {
             VehiclesPrinter.PrintAllVehiclesMethod(cars, trucks);
         } catch(Exception ex) {
             System.out.println("idk");
-        }
+        } */
 
 
 
