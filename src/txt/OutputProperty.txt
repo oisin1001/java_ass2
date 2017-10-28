@@ -5,7 +5,7 @@ Owner name: George
 Address: Paradise_3
 Cost per day: 50
 Number of season's rental days: 0
-Total rental days: 10
+Total rental days: 5
 Storey number: 1
 Number of beds: 2
 

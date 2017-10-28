@@ -12,6 +12,10 @@
     SEE IF IT WORKS
  */
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 class Main {
@@ -25,57 +29,112 @@ class Main {
 
     public static void main(String[] args) {
 
-		/* These three arraylists store the information about the different rented properties*/
-
-
-
-
-        /* I create an object so I can call the FillInPropertiesMethod to add details to the arraylists */
-     //   FillInProperties Filler = new FillInProperties();
-     //   Filler.FillInPropertiesMethod(apartments, houses, villas);
-
-    //    ReadInputPropertyFile PropertyReader = new ReadInputPropertyFile();
-     //   PropertyReader.readInputPropertyFileMethod(Main.apartments, Main.houses, Main.villas);
-
-    //    ReadInputVehicleFile VehicleReader = new ReadInputVehicleFile();
-    //    VehicleReader.readInputVehicleFileMethod(cars, trucks);
-
         Menu menuFrame = new Menu();
         menuFrame.setSize(700,100);
         menuFrame.setLocation(300,360);
         menuFrame.setVisible(true);
 
-
-        //     RentProperty2 frame = new RentProperty2(apartments, houses, villas);
-    /*    RentProperty2 frame = new RentProperty2();
-        frame.setSize(470,65);
-        frame.setLocation(300,360);
-        frame.setVisible(true); */
-
-
-		
-        /* I create an object so I can call the PrintAllPropertiesMethod to print the added information */
-    /*    PrintAllProperties PropertyPrinter = new PrintAllProperties();
-        try {
-            PropertyPrinter.PrintAllPropertiesMethod(Main.apartments, Main.houses, Main.villas);
-        } catch(Exception ex) {
-            System.out.println("idk");
-        }*/
-
-  /*      PrintAllVehicles VehiclesPrinter = new PrintAllVehicles();
-        try {
-            VehiclesPrinter.PrintAllVehiclesMethod(cars, trucks);
-        } catch(Exception ex) {
-            System.out.println("idk");
-        } */
-
-
-
-	//	PrintAllProperties Printer = new PrintAllProperties();
-	//	Printer.PrintAllPropertiesMethod(apartments, houses, villas);
-		
-		/* I create an object so I can call the CalculateTotalIncomeAmount method to calculate the total income amount */
-	//	CalculateTotalIncome Calculator = new CalculateTotalIncome();
-	//	Calculator.CalculateTotalIncomeAmount(apartments, houses, villas);
 	}
+}
+
+class Menu extends JFrame implements ActionListener {
+
+    private JButton importPropertyButton = new JButton("Import Property");
+    private JButton rentPropertyButton = new JButton("Rent Property");
+    private JButton CalculatePropertyIncomeButton = new JButton("Calculate Property Income");
+    private JButton printPropertyButton = new JButton("Print Property");
+    private JButton importVehicleButton = new JButton("Import Vehicle");
+    private JButton rentVehicleButton = new JButton("Rent Vehicle");
+    private JButton CalculateVehicleIncomeButton = new JButton("Calculate Vehicle Income");
+    private JButton printVehicleButton = new JButton("Print Vehicle");
+
+    Menu(){
+        super("MyBNB - Main Menu");
+        importPropertyButton.addActionListener(this);
+        rentPropertyButton.addActionListener(this);
+        CalculatePropertyIncomeButton.addActionListener(this);
+        printPropertyButton.addActionListener(this);
+        importVehicleButton.addActionListener(this);
+        rentVehicleButton.addActionListener(this);
+        CalculateVehicleIncomeButton.addActionListener(this);
+        printVehicleButton.addActionListener(this);
+        Container content = this.getContentPane();
+        content.setLayout(new GridLayout(2,4));
+        content.add(importPropertyButton);
+        content.add(rentPropertyButton);
+        content.add(CalculatePropertyIncomeButton);
+        content.add(printPropertyButton);
+        content.add(importVehicleButton);
+        content.add(rentVehicleButton);
+        content.add(CalculateVehicleIncomeButton);
+        content.add(printVehicleButton);
+
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        Property methodProperty = new Property();
+        Vehicle methodVehicle = new Vehicle();
+        if(e.getSource() == importPropertyButton)
+        {
+            methodProperty.readInputPropertyFile(Main.apartments, Main.houses, Main.villas);
+            JOptionPane.showMessageDialog(null,"Property import successful:");
+        }
+
+        else if(e.getSource() == rentPropertyButton)
+        {
+            RentProperty frame = new RentProperty();
+            frame.setSize(470,65);
+            frame.setLocation(300,360);
+            frame.setVisible(true);
+        }
+
+        else if(e.getSource() == CalculatePropertyIncomeButton)
+        {
+
+            methodProperty.CalculatePropertyTotalIncome(Main.apartments, Main.houses, Main.villas);
+        }
+
+        else if(e.getSource() == printPropertyButton)
+        {
+            try {
+                methodProperty.PrintAllProperties(Main.apartments, Main.houses, Main.villas);
+                JOptionPane.showMessageDialog(null,"Property printed to OutputProperty.txt");
+            } catch(Exception ex) {
+                JOptionPane.showMessageDialog(null, "Error printing to OutputProperty.txt!");
+            }
+
+        }
+
+        else if(e.getSource() == importVehicleButton)
+        {
+            methodVehicle.readInputVehicleFile(Main.cars, Main.trucks);
+            JOptionPane.showMessageDialog(null,"Vehicle import successful:");
+        }
+
+        else if(e.getSource() == rentVehicleButton)
+        {
+            RentVehicle frame = new RentVehicle();
+            frame.setSize(470,65);
+            frame.setLocation(300,360);
+            frame.setVisible(true);
+        }
+
+        else if(e.getSource() == CalculateVehicleIncomeButton)
+        {
+            methodVehicle.CalculateVehicleTotalIncome(Main.cars, Main.trucks);
+        }
+
+        else if(e.getSource() == printVehicleButton)
+        {
+             try {
+                methodVehicle.PrintAllVehicles(Main.cars, Main.trucks);
+                 JOptionPane.showMessageDialog(null,"Vehicles printed to OutputVehicles.txt");
+            } catch(Exception ex) {
+                 JOptionPane.showMessageDialog(null,"Error printing to OutputVehicles.txt");
+            }
+        }
+
+
+    }
 }

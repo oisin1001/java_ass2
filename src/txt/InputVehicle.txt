@@ -1,6 +1,0 @@
-1 40 4 Tim
-1 60 6 Sam
-1 30 2 Bilbo
-2 70 200 Sean
-2 140 400 Vincent
-2 110 350 Charles
