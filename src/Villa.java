@@ -1,4 +1,4 @@
-//Java Assignment 1 - Oisin Quinn - 16314071
+//Java Assignment 2 - Oisin Quinn - 16314071
 
 /*
  *  This file contains the Villa class for creating villas for the system
@@ -6,7 +6,7 @@
 
 /* The class extends the Property class - so it inherits the methods and variables of that class */
 class Villa extends Property {
-	/* These are the class-specific variables that are part of the Villa class */
+	/* These are the class-specific variables that are not part of the Property class */
 	private int roomServiceRate;
 	private int luxuryTaxRate;
 	

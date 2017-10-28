@@ -1,32 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4dbe8a42-71f1-47b9-8663-50377aa3e801" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/assignment2/CalculateTotalIncome.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/assignment2/FillInProperties.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/assignment2/PrintAllProperties.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/assignment2/PrintToFile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/assignment2/ReadInputPropertyFile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CalculatePropertyTotalIncome.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CalculateTotalIncome.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CalculateVehicleTotalIncome.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Menu.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/PrintAllProperties.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/PrintAllVehicles.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ReadInputPropertyFile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ReadInputVehicleFile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/txt/InputVehicle.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/txt/OutputVehicle.txt" afterPath="" />
+    <list default="true" id="4dbe8a42-71f1-47b9-8663-50377aa3e801" name="Default" comment="Add comments and make finishing touches">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Rentable.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/RentalItem.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/assignment2/Main.class" afterPath="$PROJECT_DIR$/out/production/assignment2/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/assignment2/Property.class" afterPath="$PROJECT_DIR$/out/production/assignment2/Property.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/assignment2/RentProperty.class" afterPath="$PROJECT_DIR$/out/production/assignment2/RentProperty.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/.gitignore" afterPath="$PROJECT_DIR$/src/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Apartment.java" afterPath="$PROJECT_DIR$/src/Apartment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Car.java" afterPath="$PROJECT_DIR$/src/Car.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/House.java" afterPath="$PROJECT_DIR$/src/House.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Property.java" afterPath="$PROJECT_DIR$/src/Property.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RentProperty.java" afterPath="$PROJECT_DIR$/src/RentProperty.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RentVehicle.java" afterPath="$PROJECT_DIR$/src/RentVehicle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Truck.java" afterPath="$PROJECT_DIR$/src/Truck.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vehicle.java" afterPath="$PROJECT_DIR$/src/Vehicle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Villa.java" afterPath="$PROJECT_DIR$/src/Villa.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/txt/OutputProperty.txt" afterPath="$PROJECT_DIR$/src/txt/OutputProperty.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -42,23 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="120" column="9" lean-forward="true" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RentProperty.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RentProperty.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="63" column="37" lean-forward="true" selection-start-line="62" selection-start-column="12" selection-end-line="63" selection-end-column="37" />
+            <state relative-caret-position="180">
+              <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,23 +48,10 @@
       <file leaf-file-name="RentVehicle.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/RentVehicle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="57" column="37" lean-forward="false" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vehicle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vehicle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="94" column="4" lean-forward="false" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+            <state relative-caret-position="1125">
+              <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#readInputVehicleFile#0;class#Vehicle#0" expanded="false" />
-                <element signature="method#CalculateVehicleTotalIncome#0;class#Vehicle#0" expanded="false" />
-                <element signature="method#PrintAllVehicles#0;class#Vehicle#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -118,26 +84,28 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Apartment.java" />
-        <option value="$PROJECT_DIR$/src/Villa.java" />
-        <option value="$PROJECT_DIR$/src/House.java" />
         <option value="$PROJECT_DIR$/src/FillInProperties.java" />
         <option value="$PROJECT_DIR$/src/test.form" />
         <option value="$PROJECT_DIR$/src/PrintToFile.java" />
-        <option value="$PROJECT_DIR$/src/RentalItem.java" />
         <option value="$PROJECT_DIR$/src/Menu.java" />
         <option value="$PROJECT_DIR$/src/CalculatePropertyTotalIncome.java" />
         <option value="$PROJECT_DIR$/src/ReadInputPropertyFile.java" />
-        <option value="$PROJECT_DIR$/src/RentProperty.java" />
         <option value="$PROJECT_DIR$/src/ReadInputVehicleFile.java" />
         <option value="$PROJECT_DIR$/src/CalculateVehicleTotalIncome.java" />
-        <option value="$PROJECT_DIR$/src/Property.java" />
         <option value="$PROJECT_DIR$/src/PrintAllProperties.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/PrintAllVehicles.java" />
-        <option value="$PROJECT_DIR$/src/Vehicle.java" />
-        <option value="$PROJECT_DIR$/src/RentVehicle.java" />
         <option value="$PROJECT_DIR$/src/.gitignore" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/House.java" />
+        <option value="$PROJECT_DIR$/src/Villa.java" />
+        <option value="$PROJECT_DIR$/src/Apartment.java" />
+        <option value="$PROJECT_DIR$/src/Truck.java" />
+        <option value="$PROJECT_DIR$/src/Car.java" />
+        <option value="$PROJECT_DIR$/src/RentalItem.java" />
+        <option value="$PROJECT_DIR$/src/Property.java" />
+        <option value="$PROJECT_DIR$/src/Vehicle.java" />
+        <option value="$PROJECT_DIR$/src/RentProperty.java" />
+        <option value="$PROJECT_DIR$/src/RentVehicle.java" />
       </list>
     </option>
   </component>
@@ -181,6 +149,12 @@
               <item name="java_ass2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="txt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java_ass2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java_ass2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Main.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
           </expand>
           <select />
@@ -313,6 +287,14 @@
       <option name="presentableId" value="Default" />
       <updated>1508233558324</updated>
     </task>
+    <task id="LOCAL-00001" summary="Grouped classes into less files, made minor fixes">
+      <created>1509219458667</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1509219458667</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -325,15 +307,15 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282353" sideWeight="0.50277776" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3282353" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3282353" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18680556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -351,8 +333,15 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Grouped classes into less files, made minor fixes" />
+    <MESSAGE value="Add comments and make finishing touches" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add comments and make finishing touches" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -371,12 +360,13 @@
         <state relative-caret-position="225">
           <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="28" selection-end-column="0" />
           <folding>
+            <element signature="e#0#6095#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RentalItem.java">
+    <entry file="file://$PROJECT_DIR$/src/Rentable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
@@ -397,8 +387,9 @@
         <state relative-caret-position="435">
           <caret line="33" column="5" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="33" selection-end-column="5" />
           <folding>
+            <element signature="e#0#11674#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="method#readInputPropertyFile#0;class#Property#0" expanded="false" />
+            <element signature="method#CalculatePropertyTotalIncome#0;class#Property#0" expanded="false" />
             <element signature="method#PrintAllProperties#0;class#Property#0" expanded="false" />
           </folding>
         </state>
@@ -425,6 +416,7 @@
         <state relative-caret-position="345">
           <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
           <folding>
+            <element signature="e#0#6095#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -445,8 +437,9 @@
         <state relative-caret-position="45">
           <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding>
+            <element signature="e#0#11674#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="method#readInputPropertyFile#0;class#Property#0" expanded="false" />
+            <element signature="method#CalculatePropertyTotalIncome#0;class#Property#0" expanded="false" />
             <element signature="method#PrintAllProperties#0;class#Property#0" expanded="false" />
           </folding>
         </state>
@@ -473,6 +466,7 @@
         <state relative-caret-position="345">
           <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
           <folding>
+            <element signature="e#0#6095#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -493,8 +487,9 @@
         <state relative-caret-position="45">
           <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding>
+            <element signature="e#0#11674#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="method#readInputPropertyFile#0;class#Property#0" expanded="false" />
+            <element signature="method#CalculatePropertyTotalIncome#0;class#Property#0" expanded="false" />
             <element signature="method#PrintAllProperties#0;class#Property#0" expanded="false" />
           </folding>
         </state>
@@ -528,32 +523,9 @@
         <state relative-caret-position="30">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
+            <element signature="e#0#6095#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Apartment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" column="80" lean-forward="false" selection-start-line="22" selection-start-column="80" selection-end-line="22" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/House.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="58" column="28" lean-forward="true" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Villa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="15" lean-forward="false" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -561,14 +533,6 @@
     <entry file="file://$PROJECT_DIR$/src/test.form" />
     <entry file="file://$PROJECT_DIR$/src/FillInProperties.java" />
     <entry file="file://$PROJECT_DIR$/src/PrintToFile.java" />
-    <entry file="file://$PROJECT_DIR$/src/RentalItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CalculatePropertyTotalIncome.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -633,48 +597,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Property.java">
+    <entry file="file://$PROJECT_DIR$/src/txt/InputVehicles.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="242" column="27" lean-forward="false" selection-start-line="242" selection-start-column="9" selection-end-line="242" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#readInputPropertyFile#0;class#Property#0" expanded="false" />
-            <element signature="method#PrintAllProperties#0;class#Property#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="120" column="9" lean-forward="true" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vehicle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="94" column="4" lean-forward="false" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#readInputVehicleFile#0;class#Vehicle#0" expanded="false" />
-            <element signature="method#CalculateVehicleTotalIncome#0;class#Vehicle#0" expanded="false" />
-            <element signature="method#PrintAllVehicles#0;class#Vehicle#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RentProperty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="63" column="37" lean-forward="true" selection-start-line="62" selection-start-column="12" selection-end-line="63" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -686,11 +613,120 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Villa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="8" column="79" lean-forward="false" selection-start-line="8" selection-start-column="79" selection-end-line="8" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#2072#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Truck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="36" column="42" lean-forward="false" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#1331#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Apartment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-211">
+          <caret line="8" column="79" lean-forward="false" selection-start-line="8" selection-start-column="79" selection-end-line="8" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#2001#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#1438#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/House.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-226">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#2009#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vehicle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#7673#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#readInputVehicleFile#0;class#Vehicle#0" expanded="false" />
+            <element signature="method#CalculateVehicleTotalIncome#0;class#Vehicle#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#6095#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="234" column="24" lean-forward="false" selection-start-line="234" selection-start-column="24" selection-end-line="234" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#11674#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#CalculatePropertyTotalIncome#0;class#Property#0" expanded="false" />
+            <element signature="method#PrintAllProperties#0;class#Property#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Rentable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#387#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RentProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/RentVehicle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="57" column="37" lean-forward="false" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="1125">
+          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

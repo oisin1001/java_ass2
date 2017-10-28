@@ -1,14 +1,10 @@
-//Java Assignment 1 - Oisin Quinn - 16314071
+//Java Assignment 2 - Oisin Quinn - 16314071
 
 /*
  *  This file contains the Property class that is inherited by the Apartment, House and Villa classes
  */
 
-
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -16,7 +12,8 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class Property implements RentalItem {
+// This is the property class used for each property created
+class Property implements Rentable {
 	private int registerNumber;
 	private String ownerName = "";
 	private String address = "";
@@ -24,6 +21,7 @@ class Property implements RentalItem {
 	private int seasonsRentalDays;
 	private int totalRentalDays = 0;
 
+	// I use an empty constructor so I can create a Property class without any parameters
     Property(){}
 
     /**
@@ -40,7 +38,6 @@ class Property implements RentalItem {
 		address = enteredAddress;
 		costPerDay = enteredCost;
 		seasonsRentalDays = enteredDays;
-		/* Here I rent each property three times */
 
 	}
 	
@@ -133,11 +130,6 @@ class Property implements RentalItem {
 	{
 		seasonsRentalDays = enteredDays;
 	}
-	
-	/**
-	Records that the property has been rented for a certain number of days
-	@param rentalDays the number of days the property has been rented for
- 	*/
 
 	/**
 	 * Returns the value for how many days the property was rented for
@@ -148,11 +140,11 @@ class Property implements RentalItem {
 		return totalRentalDays;
 	}
 
-    void setTotalRentalDays(int enteredRentalDays)
-    {
-        totalRentalDays = enteredRentalDays;
-    }
-
+    /**
+     * Sets the new value for rentalDays in the class
+     * This is required as its a method from the implemented interface "RentalItem"
+     * @param enteredRentalDays the number of days entered in the JFrame
+     */
     public void RentalItem(int enteredRentalDays){
         totalRentalDays = enteredRentalDays;
     }
@@ -193,19 +185,33 @@ class Property implements RentalItem {
         JOptionPane.showMessageDialog(null, "Total rental income: " + totalIncome);
     }
 
+    /**
+     * This method reads in and parses the information in InputProperty.txt
+     * @param apartments the arraylist that contains details about the apartments
+     * @param houses the arraylist that contains details about the houses
+     * @param villas he arraylist that contains details about the villas
+     */
     void readInputPropertyFile(ArrayList<Apartment> apartments, ArrayList<House> houses, ArrayList<Villa> villas)
     {
         String line;
         int regNum = 1;
 
+        // I use try and catch to catch the FileNotFound exception
         try {
+            // This is the file location
             FileReader myFile = new FileReader("src/txt/InputProperty.txt");
             Scanner scanFile = new Scanner(myFile);
+
+            // This while loop cycles through each line of the file
             while(scanFile.hasNextLine()){
                 line = scanFile.nextLine();
 
+                // I create a new scanner to go through each word
                 Scanner getWords = new Scanner(line);
+                // The first int is related to which kind of property it is
                 int PropertyType = getWords.nextInt();
+
+                // If it's an apartment, this if statement runs and fills in the arraylist with the appropriate info
                 if (PropertyType == 1) {
                     int StoreyNumber = getWords.nextInt();
                     int BedsNumber= getWords.nextInt();
@@ -213,7 +219,9 @@ class Property implements RentalItem {
                     int TotalRentalDays= getWords.nextInt();
                     String Owner= getWords.next();
                     String PostalAddress= getWords.next();
+                    // I increment the register number by one each time, so it's unique for each property
                     apartments.add(new Apartment(regNum++, Owner, PostalAddress, RentalCostPerDay, TotalRentalDays, StoreyNumber, BedsNumber ));
+                    // If it's a house, this if statement runs and fills in the arraylist with the appropriate info
                 } else if (PropertyType == 2) {
                     int numberOfStories = getWords.nextInt();
                     int clearingFees= getWords.nextInt();
@@ -223,6 +231,7 @@ class Property implements RentalItem {
                     String PostalAddress= getWords.next();
                     houses.add(new House(regNum++, Owner, PostalAddress, RentalCostPerDay, TotalRentalDays, numberOfStories, clearingFees));
                 } else if (PropertyType == 3) {
+                    // If it's a villa, this if statement runs and fills in the arraylist with the appropriate info
                     int numberOfStories = getWords.nextInt();
                     int roomServiceRate = getWords.nextInt();
                     int luxuryTaxRate = getWords.nextInt();
@@ -232,23 +241,32 @@ class Property implements RentalItem {
                     String PostalAddress= getWords.next();
                     villas.add(new Villa(regNum++, Owner, PostalAddress, RentalCostPerDay, TotalRentalDays, roomServiceRate, luxuryTaxRate));
                 }
-
             }
         }
         catch(Exception ex) {
-            System.out.println("exception "+ex.getMessage()+" caught");
+            JOptionPane.showMessageDialog(null, "Error reading in file");
         }
     }
 
+    /**
+     * This method prints all of the properties to OutputProperty.txt
+     * @param apartments the arraylist that contains details about the apartments
+     * @param houses the arraylist that contains details about the houses
+     * @param villas he arraylist that contains details about the villas
+     * @throws FileNotFoundException This exception is thrown if OutputProperty.txt can not be created or changed
+     */
     void PrintAllProperties(ArrayList<Apartment> apartments, ArrayList<House> houses, ArrayList<Villa> villas)
             throws FileNotFoundException {
 
+        // This is the location of the output file
         File fileName = new File("src/txt/OutputProperty.txt");
 
+        // This is used to write to the file
         PrintWriter pw = new PrintWriter(fileName);
 
         int i;
 
+        // These will print the contents of the arraylists to the output file
         pw.println("=============== All Apartments ============");
         for(i=0;i<3;i++) {
             pw.println("Apartment " + (i+1) + ":\n" + "Register Number: "
